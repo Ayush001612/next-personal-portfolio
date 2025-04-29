@@ -6,11 +6,11 @@ import Image from 'next/image';
 const projects = [
   {
     id: 1,
-    title: 'E-commerce Platform',
+    title: 'Giphy Website',
     description:
-      'A full-featured e-commerce platform with payment integration and admin dashboard.',
-    image: '/assets/proj10.png',
-    tags: ['React', 'Node.js', 'MongoDB'],
+      'A fun and interactive Giphy website to search and explore trending GIFs using the Giphy API in real-time.',
+    image: '/assets/giphy.png',
+    tags: ['React','Tailwind CSS'],
   },
   {
     id: 2,
