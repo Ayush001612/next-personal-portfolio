@@ -28,7 +28,7 @@ export const Footer = () => {
         <ul className='flex gap-5 flex-wrap items-center'>
           {/* Highlighted CV icon for resume download */}
           <a
-            href='/assets/resume-4.pdf'
+            href='/assets/resume-5.pdf'
             download
             aria-label='Download Resume'
             className='flex items-center justify-center w-10 h-10 rounded-full border-2 border-purple-500 bg-purple-600 text-white font-bold text-lg shadow-lg hover:bg-white hover:text-purple-600 transition-colors'
