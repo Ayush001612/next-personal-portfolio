@@ -6,19 +6,19 @@ import Image from 'next/image';
 const projects = [
   {
     id: 1,
+    title: 'College Attendence System',
+    description:
+      'A web-based College Attendance System for real-time attendance tracking and task management.',
+    image: '/assets/attendence.png',
+    tags: ['React','Typescript','Firebase','Next'],
+  },
+  {
+    id: 2,
     title: 'Giphy Website',
     description:
       'A fun and interactive Giphy website to search and explore trending GIFs using the Giphy API in real-time.',
     image: '/assets/giphy.png',
     tags: ['React','Tailwind CSS'],
-  },
-  {
-    id: 2,
-    title: 'Portfolio Website',
-    description:
-      'A sleek and responsive personal portfolio built with Next.js, showcasing projects, skills, and contact information with smooth navigation and modern UI',
-    image: '/assets/portfolio.png',
-    tags: ['Next.js', 'TypeScript', 'Tailwind CSS'],
   },
   {
     id: 3,
