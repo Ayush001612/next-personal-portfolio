@@ -4,6 +4,8 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaHeart } from 'react-icons/fa';
 import { HiMenu, HiX } from 'react-icons/hi';
+import { AiFillGithub } from 'react-icons/ai';
+import { FaFilePdf } from 'react-icons/fa';
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -44,9 +46,8 @@ export const Navbar = () => {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-black/80 backdrop-blur-md py-4' : 'bg-transparent py-6'
-      }`}
+      className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-black/80 backdrop-blur-md py-4' : 'bg-transparent py-6'
+        }`}
     >
       <div className='container mx-auto px-4'>
         <div className='flex justify-between items-center'>
@@ -65,6 +66,29 @@ export const Navbar = () => {
             ))}
           </div>
           <div className='flex items-center gap-4'>
+            <div className='hidden md:flex items-center gap-3'>
+              <motion.a
+                href='/assets/resume-9.pdf'
+                download
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                className='text-white hover:text-purple-400 transition-colors'
+                aria-label='Download CV'
+              >
+                <FaFilePdf size={20} />
+              </motion.a>
+              <motion.a
+                href='https://github.com/Ayush001612'
+                target='_blank'
+                rel='noopener noreferrer'
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                className='text-white hover:text-purple-400 transition-colors'
+                aria-label='GitHub'
+              >
+                <AiFillGithub size={20} />
+              </motion.a>
+            </div>
             <motion.button
               onClick={handleHeartClick}
               whileHover={{ scale: 1.1 }}
@@ -105,6 +129,27 @@ export const Navbar = () => {
                   {link.label}
                 </a>
               ))}
+              <div className='flex items-center gap-4 pt-4 border-t border-gray-700'>
+                <a
+                  href='/assets/resume-9.pdf'
+                  download
+                  onClick={() => setIsMenuOpen(false)}
+                  className='text-gray-300 hover:text-white transition-colors'
+                  aria-label='Download CV'
+                >
+                  <FaFilePdf size={24} />
+                </a>
+                <a
+                  href='https://github.com/Ayush001612'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  onClick={() => setIsMenuOpen(false)}
+                  className='text-gray-300 hover:text-white transition-colors'
+                  aria-label='GitHub'
+                >
+                  <AiFillGithub size={24} />
+                </a>
+              </div>
             </div>
           </motion.div>
         )}
